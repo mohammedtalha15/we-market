@@ -3,122 +3,64 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { Accordion } from "@/components/ui/Accordion";
+import { ContactHero } from "@/components/contact/ContactHero";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { site } from "@/lib/data/site";
-import { homeFaqs } from "@/lib/data/content";
+import { ContactDetails, MobileContactStrip } from "@/components/contact/ContactDetails";
+import { ContactTrust } from "@/components/contact/ContactTrust";
+import { ContactClosingCta } from "@/components/contact/ContactClosingCta";
+import { contactFaqs } from "@/lib/data/contact";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Let's talk growth. Start a project with WeMarket — tell us what you're trying to achieve and we'll map the right growth system for your business.",
+    "Let's talk growth. Tell WeMarket what you're building — we'll map the right mix of strategy, creative, performance, technology and AI-enabled growth for your business.",
 };
-
-const reasons = [
-  "One partner for strategy, creative, web, marketing and technology",
-  "Strategies built around your industry's real buying journey",
-  "Measurable outcomes — leads, conversions and growth, not vanity metrics",
-  "A team that treats your business goals as the brief",
-];
 
 export default function ContactPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-forest pt-32 pb-16 text-fg-onDark md:pt-40 md:pb-20">
-        <Container className="relative">
-          <Reveal>
-            <Eyebrow tone="dark">Contact</Eyebrow>
-          </Reveal>
-          <Reveal delay={80}>
-            <h1 className="mt-7 max-w-4xl font-display text-[length:var(--text-display)] font-extrabold text-white">
-              Let&apos;s talk <span className="text-lime">growth.</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={140}>
-            <p className="mt-7 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-fg-onDark-muted">
-              Whether you&apos;re building a brand, generating demand or launching a digital
-              experience — tell us what you&apos;re trying to achieve, and we&apos;ll map the right
-              growth system for your business.
-            </p>
-          </Reveal>
-        </Container>
-      </section>
+      <ContactHero />
 
-      {/* Form + details */}
-      <section className="bg-paper py-20 md:py-28">
-        <Container className="grid grid-cols-1 gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+      {/* Form + contact details */}
+      <section className="bg-paper py-16 md:py-24 lg:py-28">
+        <Container>
           <Reveal>
-            <ContactForm />
+            <MobileContactStrip className="mb-10" />
           </Reveal>
 
-          <div className="flex flex-col gap-10">
-            <Reveal delay={80}>
-              <div className="flex flex-col gap-5">
-                <h2 className="eyebrow text-fg-muted">Reach us directly</h2>
-                <div className="flex flex-col gap-4">
-                  <ContactRow label="Call" value={site.contact.phone} href={`tel:${site.contact.phoneHref}`} />
-                  <ContactRow label="Email" value={site.contact.email} href={`mailto:${site.contact.email}`} />
-                  <ContactRow label="Studio" value={site.contact.address} />
-                </div>
-              </div>
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16 xl:gap-20">
+            <Reveal className="lg:col-span-7 xl:col-span-8">
+              <ContactForm />
             </Reveal>
 
-            <Reveal delay={140}>
-              <div className="flex flex-col gap-4 rounded-[var(--radius-card)] border border-line bg-white p-7">
-                <h2 className="text-lg font-extrabold tracking-tight text-fg">
-                  Why work with WeMarket
-                </h2>
-                <ul className="flex flex-col gap-3">
-                  {reasons.map((r) => (
-                    <li key={r} className="flex gap-3 text-[0.95rem] leading-snug text-fg-muted">
-                      <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal" />
-                      {r}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-
-            <Reveal delay={200}>
-              <div className="flex items-center gap-6 border-t border-line pt-6">
-                <div>
-                  <div className="font-display text-4xl font-extrabold text-fg">{site.proof.clients}</div>
-                  <div className="mt-1 text-sm text-fg-muted">Clients served</div>
-                </div>
-                <div>
-                  <div className="font-display text-4xl font-extrabold text-fg">{site.proof.experience}</div>
-                  <div className="mt-1 text-sm text-fg-muted">Years of experience</div>
-                </div>
-              </div>
+            <Reveal delay={80} className="lg:col-span-5 xl:col-span-4">
+              <ContactDetails />
             </Reveal>
           </div>
         </Container>
       </section>
 
-      {/* FAQ */}
-      <section className="bg-paper pb-24 md:pb-32">
-        <Container className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-          <div>
+      <ContactTrust />
+
+      {/* Contact-specific FAQ */}
+      <section className="bg-paper py-20 md:py-28">
+        <Container className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
             <Eyebrow>FAQ</Eyebrow>
             <h2 className="mt-6 font-display text-[length:var(--text-h2)] font-extrabold text-fg">
-              Before you ask.
+              Common questions.
             </h2>
+            <p className="mt-4 max-w-sm text-fg-muted leading-relaxed">
+              Everything you might want to know before starting a conversation with us.
+            </p>
           </div>
-          <Accordion items={homeFaqs} />
+          <div className="lg:col-span-8">
+            <Accordion items={contactFaqs} />
+          </div>
         </Container>
       </section>
+
+      <ContactClosingCta />
     </>
   );
-}
-
-function ContactRow({ label, value, href }: { label: string; value: string; href?: string }) {
-  const content = (
-    <div className="group flex flex-col gap-1 border-b border-line pb-4">
-      <span className="eyebrow text-fg-muted">{label}</span>
-      <span className="text-[1.05rem] font-semibold tracking-tight text-fg transition-colors group-hover:text-teal">
-        {value}
-      </span>
-    </div>
-  );
-  return href ? <a href={href}>{content}</a> : content;
 }
