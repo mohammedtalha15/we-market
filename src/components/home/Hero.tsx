@@ -41,9 +41,10 @@ export function Hero() {
 
           <Reveal delay={520}>
             <p className="mt-7 max-w-xl text-[length:var(--text-lead)] leading-relaxed text-fg-onDark-muted">
-              We connect strategy, creative, technology and performance marketing
-              to help businesses get discovered, earn trust, generate demand and
-              turn digital growth into measurable business outcomes.
+              We combine strategy, creative, performance and technology — with AI
+              woven through how we research, create and optimise — to help
+              businesses get discovered, earn trust, generate demand and turn
+              digital growth into measurable business outcomes.
             </p>
           </Reveal>
 

@@ -1,50 +1,66 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
-import { ProjectCard } from "@/components/ui/ProjectCard";
-import { featuredProjects } from "@/lib/data/projects";
+import { FeaturedWorkList } from "@/components/work/FeaturedWorkList";
+import { projects } from "@/lib/data/projects";
+
+function bySlug(slug: string) {
+  return projects.find((p) => p.slug === slug)!;
+}
+
+// Curated editorial list — every project in the same format, metric-forward.
+const showcase = [
+  "palli-developers",
+  "onco-caregiver",
+  "aadya-academy",
+  "healius",
+  "capital-international-school",
+].map(bySlug);
 
 export function FeaturedWork() {
-  const [lead, ...rest] = featuredProjects;
-
   return (
-    <section className="bg-ink py-24 text-fg-onDark md:py-32">
+    <section className="bg-greenblack py-24 text-fg-onDark md:py-32">
       <Container>
-        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-          <SectionHeading
-            tone="dark"
-            eyebrow="Featured work"
-            title={
-              <>
+        {/* Header — 12-col editorial grid */}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-8">
+            <Reveal>
+              <Eyebrow tone="dark">Selected work</Eyebrow>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2 className="mt-6 font-display text-[length:var(--text-h2)] font-extrabold text-fg-onDark">
                 Work that <span className="text-lime">moves business.</span>
-              </>
-            }
-          />
-          <Reveal delay={160}>
-            <Button href="/work" tone="dark" variant="outline" className="shrink-0">
-              View All Work
-            </Button>
-          </Reveal>
+              </h2>
+            </Reveal>
+            <Reveal delay={140}>
+              <p className="mt-5 max-w-xl text-[length:var(--text-lead)] leading-relaxed text-fg-onDark-muted">
+                A curated look at brands we&apos;ve helped get discovered, earn trust and grow —
+                across industries and channels.
+              </p>
+            </Reveal>
+          </div>
+          <div className="lg:col-span-4 lg:flex lg:justify-end">
+            <Reveal delay={200}>
+              <Link
+                href="/work"
+                className="group inline-flex items-center gap-2 rounded-full border border-line-onDark-strong px-6 py-3 text-[0.9rem] font-semibold text-fg-onDark transition-colors hover:border-lime hover:text-lime"
+              >
+                View all work
+                <span aria-hidden className="transition-transform group-hover:translate-x-0.5">
+                  →
+                </span>
+              </Link>
+            </Reveal>
+          </div>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-12">
-          <Reveal className="lg:col-span-7">
-            {lead && <ProjectCard project={lead} size="large" />}
-          </Reveal>
-          <div className="flex flex-col gap-6 lg:col-span-5">
-            {rest.slice(0, 1).map((p) => (
-              <Reveal key={p.slug} delay={80}>
-                <ProjectCard project={p} />
-              </Reveal>
-            ))}
+        {/* Unified editorial list + follow-cursor preview */}
+        <Reveal>
+          <div className="mt-14 lg:mt-16">
+            <FeaturedWorkList projects={showcase} />
           </div>
-          {rest.slice(1).map((p, i) => (
-            <Reveal key={p.slug} delay={i * 80} className="lg:col-span-6">
-              <ProjectCard project={p} />
-            </Reveal>
-          ))}
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

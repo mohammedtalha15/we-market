@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     slug: "palli-developers",
     client: "Palli Developers",
-    industry: "Real Estate",
+    industry: "Real Estate & Construction",
     industrySlug: "real-estate",
     services: ["Lead Generation", "Google Ads", "Landing Pages"],
     tags: ["real-estate", "performance"],
@@ -84,7 +84,7 @@ export const projects: Project[] = [
   {
     slug: "live-in-properties",
     client: "Live In Properties",
-    industry: "Real Estate",
+    industry: "Real Estate & Construction",
     industrySlug: "real-estate",
     services: ["Web", "Performance", "Lead Generation"],
     tags: ["real-estate", "web", "performance"],
@@ -96,10 +96,10 @@ export const projects: Project[] = [
   {
     slug: "combine-design",
     client: "Combine Design",
-    industry: "Interior & Architecture",
-    industrySlug: "interior-architecture",
+    industry: "Creative & Professional Services",
+    industrySlug: "creative",
     services: ["Branding", "Web", "Creative"],
-    tags: ["interior", "branding", "web"],
+    tags: ["branding", "web", "creative"],
     description:
       "A digital presence as considered as the studio's work — portfolio-led, brand-first, built to convert enquiries.",
     result: null,

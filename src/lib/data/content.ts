@@ -115,7 +115,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "Which industries do you work with?",
-    a: "We work across real estate, education, healthcare, interior & architecture and corporate/professional businesses. Different industries have different buying journeys, so we build strategies around how your industry actually works.",
+    a: "We work across real estate & construction, education, healthcare and corporate & professional services. Different industries have different buying journeys, so we build strategies around how your industry actually works.",
   },
   {
     q: "Can I combine multiple services?",

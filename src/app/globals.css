@@ -16,6 +16,10 @@
   --color-ink-2: #12180f;        /* raised black surface */
   --color-ink-3: #1b231b;        /* card on black */
 
+  /* Rich green-black — used by the Featured Work showcase */
+  --color-greenblack: #06130d;
+  --color-greenblack-2: #0b1d14; /* raised surface on green-black */
+
   /* Brand green accents (for light backgrounds / fills) */
   --color-emerald: #1c8a5c;      /* rich green accent */
   --color-emerald-deep: #0f5e3f;

@@ -16,7 +16,7 @@ export function Services() {
               Four capabilities. <span className="text-lime">One growth system.</span>
             </>
           }
-          lead="We organise everything we do into four connected pillars — so you can start with one and scale into all of them."
+          lead="We organise everything we do into four connected pillars — and use AI across each to work faster, sharper and smarter — so you can start with one and scale into all of them."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2">

@@ -20,8 +20,9 @@ export function FinalCta() {
         <Reveal delay={200}>
           <p className="mt-8 max-w-2xl text-[length:var(--text-lead)] font-medium leading-relaxed text-ink/70">
             Whether you&apos;re building a brand, generating demand, launching a
-            digital experience or transforming your operations, let&apos;s create
-            the right growth system for your business.
+            digital experience or bringing AI into how you operate, let&apos;s
+            combine human creativity and technology into the right growth system
+            for your business.
           </p>
         </Reveal>
         <Reveal delay={300}>

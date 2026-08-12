@@ -24,9 +24,10 @@ export function About() {
         <div className="flex flex-col justify-end gap-8">
           <Reveal delay={120}>
             <p className="text-[length:var(--text-lead)] leading-relaxed text-fg-muted">
-              WeMarket is a full-funnel growth partner helping businesses build
-              authority, generate demand and scale through strategy, creative,
-              technology and performance.
+              WeMarket is a full-funnel growth partner. We bring together human
+              creativity, strategic thinking, technology and AI to help
+              businesses build authority, generate demand and scale — measured in
+              real business outcomes.
             </p>
           </Reveal>
 

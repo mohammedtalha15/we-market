@@ -11,7 +11,7 @@ import { inkFor } from "@/lib/accents";
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "We build strategies around how your industry actually works — real estate, education, healthcare, interior & architecture, corporate & professional.",
+    "We build strategies around how your industry actually works — real estate & construction, education, healthcare and corporate & professional services.",
 };
 
 export default function IndustriesPage() {

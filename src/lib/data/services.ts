@@ -28,9 +28,10 @@ export const pillars: ServicePillar[] = [
     statementLines: ["Get found. Get chosen.", "Get results."],
     accent: "#0f8f78", // teal-green
     description:
-      "We put your business in front of the right people at the right moment — then turn that attention into qualified demand and measurable revenue.",
+      "We put your business in front of the right people at the right moment — across search, AI answer engines and paid media — then turn that attention into qualified demand and measurable revenue. AI sharpens the research, targeting and optimisation behind it.",
     services: [
       "SEO",
+      "Generative Engine Optimization (GEO)",
       "Google Ads",
       "Meta Ads",
       "Performance Marketing",
@@ -94,7 +95,7 @@ export const pillars: ServicePillar[] = [
     statementLines: ["Let technology", "do the heavy lifting."],
     accent: "#f4c531", // yellow
     description:
-      "AI, automation and custom software that remove friction, capture every lead and let your team focus on what actually grows the business.",
+      "AI, automation and custom software woven into how your business actually runs — capturing every lead, personalising engagement and removing the manual work, so your team can focus on what actually grows the business.",
     services: [
       "AI Chatbots",
       "AI Voice Agents",

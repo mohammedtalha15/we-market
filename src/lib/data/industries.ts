@@ -1,6 +1,7 @@
 /**
  * Industries — dedicated /industries/[slug] pages.
- * Journeys are supplied in the brief; do not invent additional steps.
+ * Four approved primary verticals. Journeys are supplied in the brief; do not
+ * invent additional steps.
  */
 export type Industry = {
   slug: string;
@@ -17,7 +18,7 @@ export type Industry = {
 export const industries: Industry[] = [
   {
     slug: "real-estate",
-    name: "Real Estate",
+    name: "Real Estate & Construction",
     index: "01",
     headline: "Turn property searches into qualified buyers.",
     short: "Turn property searches into qualified buyers.",
@@ -33,7 +34,7 @@ export const industries: Industry[] = [
       "Site Visit",
       "Sale",
     ],
-    accent: "#ef7d3c", // orange
+    accent: "#ef7d3c", // warm orange
   },
   {
     slug: "education",
@@ -76,29 +77,9 @@ export const industries: Industry[] = [
     accent: "#f96f54", // coral
   },
   {
-    slug: "interior-architecture",
-    name: "Interior & Architecture",
-    index: "04",
-    headline: "Turn great work into a stronger digital presence.",
-    short: "Turn great work into a stronger digital presence.",
-    description:
-      "Your portfolio is your pitch. We give design-led businesses a digital presence as considered as the work itself — and the visibility to be found for it.",
-    journey: [
-      "Inspiration",
-      "Discover",
-      "Portfolio",
-      "Trust",
-      "Enquiry",
-      "Consultation",
-      "Proposal",
-      "Project",
-    ],
-    accent: "#f2a4c6", // pink
-  },
-  {
     slug: "corporate-professional",
-    name: "Corporate & Professional",
-    index: "05",
+    name: "Corporate & Professional Services",
+    index: "04",
     headline: "Build authority. Generate demand. Grow.",
     short: "Build authority. Generate demand. Grow.",
     description:
@@ -113,6 +94,6 @@ export const industries: Industry[] = [
       "Proposal",
       "Client",
     ],
-    accent: "#4f74e6", // blue
+    accent: "#4f74e6", // refined blue
   },
 ];

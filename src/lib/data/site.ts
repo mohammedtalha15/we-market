@@ -8,7 +8,7 @@ export const site = {
   positioning: "Full-Funnel Marketing & Digital Growth Partner",
   tagline: ["Build Authority.", "Generate Demand.", "Drive Growth."],
   description:
-    "WeMarket is a full-funnel growth partner helping businesses build authority, generate demand and scale through strategy, creative, technology and performance.",
+    "WeMarket is a full-funnel growth partner helping businesses build authority, generate demand and scale — combining strategy, creative, performance, technology and AI into one operating model.",
 
   contact: {
     phone: "+91 97405 08333",
