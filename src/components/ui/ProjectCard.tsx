@@ -38,6 +38,7 @@ export function ProjectCard({
     >
       {/* visual */}
       <div
+        data-cursor="image"
         className={cn(
           "relative overflow-hidden bg-ink",
           large ? "aspect-[16/10]" : "aspect-[16/11]",

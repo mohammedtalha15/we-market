@@ -42,6 +42,7 @@ export function WorkImage({
 
   return (
     <svg
+      data-cursor="image"
       viewBox="0 0 640 460"
       className={className}
       preserveAspectRatio="xMidYMid slice"

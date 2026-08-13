@@ -9,6 +9,8 @@ export type Testimonial = {
   company: string;
   industry: string;
   photo: string | null;
+  /** Links testimonial to a portfolio project when verified. */
+  projectSlug?: string;
 };
 
 export const testimonials: Testimonial[] = [
@@ -20,6 +22,7 @@ export const testimonials: Testimonial[] = [
     company: "Aadya Academy",
     industry: "Education",
     photo: null,
+    projectSlug: "aadya-academy",
   },
   {
     quote:
@@ -38,5 +41,6 @@ export const testimonials: Testimonial[] = [
     company: "Pragna Clinic",
     industry: "Healthcare",
     photo: null,
+    projectSlug: "pragna-clinic",
   },
 ];

@@ -97,7 +97,7 @@ export const projects: Project[] = [
     slug: "combine-design",
     client: "Combine Design",
     industry: "Creative & Professional Services",
-    industrySlug: "creative",
+    industrySlug: "corporate-professional",
     services: ["Branding", "Web", "Creative"],
     tags: ["branding", "web", "creative"],
     description:
