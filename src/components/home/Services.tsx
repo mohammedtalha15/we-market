@@ -27,29 +27,20 @@ const offerings = [
   {
     id: "google-ads",
     label: "Google Ads",
-    src: "/logos/google-ads.jpg",
+    src: "/logos/google-ads.png",
     alt: "Google Ads",
-    width: 160,
-    height: 90,
-    className: "h-14 w-auto max-w-[9rem] object-contain md:h-16",
-  },
-  {
-    id: "photoshop",
-    label: "Creative design",
-    src: "/logos/photoshop.png",
-    alt: "Photoshop",
-    width: 80,
-    height: 80,
-    className: "h-16 w-16 rounded-[22%] object-cover md:h-20 md:w-20",
+    width: 233,
+    height: 288,
+    className: "h-24 w-auto object-contain md:h-28",
   },
   {
     id: "claude",
     label: "AI",
     src: "/logos/claude.png",
     alt: "Claude",
-    width: 160,
-    height: 90,
-    className: "h-14 w-auto max-w-[9rem] object-contain md:h-16",
+    width: 256,
+    height: 74,
+    className: "h-16 w-auto max-w-[14rem] object-contain md:h-20 md:max-w-[18rem]",
   },
   { id: "react", label: "Website development", icon: ReactLogo },
   { id: "whatsapp", label: "WhatsApp automation", icon: WhatsAppLogo },
@@ -89,11 +80,11 @@ export function Services() {
           <Reveal>
             <p className="eyebrow text-center text-fg-onDark-muted">What we offer</p>
           </Reveal>
-          <div className="mt-10 flex flex-wrap items-end justify-center gap-8 sm:gap-10 md:gap-12">
+          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-x-10 gap-y-14 sm:grid-cols-3 sm:gap-x-16 sm:gap-y-16 md:gap-x-20 md:gap-y-20">
             {offerings.map((item, i) => (
               <Reveal key={item.id} delay={i * 70}>
                 <div className="flex flex-col items-center gap-4">
-                  <span className="inline-flex h-20 items-center justify-center md:h-24">
+                  <span className="inline-flex h-28 items-center justify-center md:h-32">
                     {"src" in item ? (
                       <Image
                         src={item.src}
