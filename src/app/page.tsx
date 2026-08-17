@@ -1,7 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { Trust } from "@/components/home/Trust";
 import { Results } from "@/components/home/Results";
-import { GrowthSystem } from "@/components/home/GrowthSystem";
 import { Industries } from "@/components/home/Industries";
 import { FeaturedWork } from "@/components/home/FeaturedWork";
 import { Services } from "@/components/home/Services";
@@ -17,7 +16,6 @@ export default function HomePage() {
       <Hero />
       <Trust />
       <Results />
-      <GrowthSystem />
       <Industries />
       <FeaturedWork />
       <Services />

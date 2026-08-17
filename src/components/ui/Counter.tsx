@@ -22,24 +22,27 @@ export function Counter({
   active,
 }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const target = Number(value.replace(/,/g, ""));
-  const hasComma = value.includes(",");
+  const target = Number(String(value).replace(/,/g, ""));
+  const hasComma = String(value).includes(",");
   const [display, setDisplay] = useState(0);
   const started = useRef(false);
   const frame = useRef<number>(0);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el || Number.isNaN(target)) return;
+    if (Number.isNaN(target)) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const stop = () => {
-      if (frame.current) cancelAnimationFrame(frame.current);
+      if (frame.current) {
+        cancelAnimationFrame(frame.current);
+        frame.current = 0;
+      }
     };
 
     const play = () => {
-      if (started.current) return;
+      stop();
       started.current = true;
       if (reduce) {
         setDisplay(target);
@@ -50,7 +53,11 @@ export function Counter({
         const t = Math.min(1, (now - start) / durationMs);
         const eased = t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
         setDisplay(Math.round(eased * target));
-        if (t < 1) frame.current = requestAnimationFrame(tick);
+        if (t < 1) {
+          frame.current = requestAnimationFrame(tick);
+        } else {
+          setDisplay(target);
+        }
       };
       frame.current = requestAnimationFrame(tick);
     };
@@ -64,19 +71,25 @@ export function Counter({
 
     if (active === true) {
       play();
-      return () => stop();
+      return () => {
+        stop();
+        started.current = false;
+      };
     }
+
+    if (!el) return;
 
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) play();
       },
-      { threshold: 0.4 },
+      { threshold: 0.15 },
     );
     io.observe(el);
     return () => {
       io.disconnect();
       stop();
+      started.current = false;
     };
   }, [active, target, durationMs]);
 
