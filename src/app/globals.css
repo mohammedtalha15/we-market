@@ -196,6 +196,31 @@ h1, h2, h3, h4 {
 .marquee:hover .marquee-track {
   animation-play-state: paused;
 }
+
+/* Hovered name lifts out of the strip; the rest recede. */
+.marquee-item {
+  position: relative;
+  transition:
+    transform 0.5s var(--ease-out-expo),
+    color 0.5s var(--ease-out-expo),
+    opacity 0.5s var(--ease-out-expo);
+}
+.marquee:hover .marquee-item {
+  opacity: 0.28;
+}
+.marquee-item:hover {
+  z-index: 2;
+  opacity: 1;
+  color: #fff;
+  transform: translateY(-10px) scale(1.08);
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-item,
+  .marquee-item:hover {
+    transform: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+}
 @keyframes marquee {
   to {
     transform: translateX(-50%);

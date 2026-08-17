@@ -26,11 +26,11 @@ export function Trust() {
         {/* edge fades */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-ink to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-ink to-transparent" />
-        <Marquee duration={55}>
+        <Marquee duration={55} className="py-6">
           {clients.map((name) => (
             <span
               key={name}
-              className="mx-8 whitespace-nowrap text-xl font-bold tracking-tight text-fg-onDark-muted/60 md:text-2xl"
+              className="marquee-item mx-8 inline-block cursor-default whitespace-nowrap py-1 text-xl font-bold tracking-tight text-fg-onDark-muted/60 md:text-2xl"
             >
               {name}
             </span>
