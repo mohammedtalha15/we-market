@@ -36,10 +36,10 @@ const proofs = [
   {
     client: "Healius",
     tag: "Healthcare",
-    value: "5",
-    suffix: "×",
-    label: "More patients",
-    detail: "Than before we started",
+    value: "142",
+    suffix: "",
+    label: "People who walked in",
+    detail: "In one year",
     accent: "#f96f54",
   },
 ] as const;

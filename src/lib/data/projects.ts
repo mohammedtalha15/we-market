@@ -41,14 +41,20 @@ export const projects: Project[] = [
     improvements: [
       {
         value: "1,450",
-        label: "Leads generated",
-        context: "Qualified buyer enquiries in a single year.",
+        label: "People who enquired",
+        context: "In one year.",
       },
       {
         value: "52",
         suffix: "×",
-        label: "Growth",
-        context: "Enquiry volume vs. the prior baseline.",
+        label: "More enquiries",
+        context: "Than before we started.",
+      },
+      {
+        value: "5",
+        suffix: "%",
+        label: "People who clicked the ad",
+        context: "Higher than typical property ads.",
       },
     ],
   },
@@ -61,15 +67,27 @@ export const projects: Project[] = [
     tags: ["education", "web", "performance"],
     description:
       "A new website and admissions-focused marketing programme that lifted online presence and delivered a consistent flow of qualified enquiries.",
-    result: null,
+    result: "50 enquiries / month",
     image: null,
     featured: true,
     improvements: [
       {
         value: "50",
         suffix: "/mo",
-        label: "Qualified leads",
-        context: "A steady monthly pipeline of admissions-ready enquiries.",
+        label: "New enquiries",
+        context: "Every month, from parents and students.",
+      },
+      {
+        value: "4",
+        suffix: "×",
+        label: "More parents asking",
+        context: "Admissions interest vs. before we started.",
+      },
+      {
+        value: "5",
+        suffix: "%",
+        label: "People who clicked the ad",
+        context: "Higher than typical school ads.",
       },
     ],
   },
@@ -82,14 +100,26 @@ export const projects: Project[] = [
     tags: ["healthcare", "performance"],
     description:
       "A full-funnel healthcare programme building trust and local visibility to drive qualified patient enquiries.",
-    result: null,
+    result: "142 walk-ins in one year",
     image: null,
     featured: true,
     improvements: [
       {
-        value: "3",
-        label: "Channels connected",
-        context: "Digital, web and performance working as one system.",
+        value: "142",
+        label: "People who walked in",
+        context: "Patients who came to the clinic in one year.",
+      },
+      {
+        value: "5",
+        suffix: "×",
+        label: "More patients",
+        context: "Than before we started.",
+      },
+      {
+        value: "5",
+        suffix: "%",
+        label: "People who clicked the ad",
+        context: "Higher than typical clinic ads.",
       },
     ],
   },
@@ -138,14 +168,27 @@ export const projects: Project[] = [
     tags: ["education", "web", "performance"],
     description:
       "An admissions-focused digital programme connecting search, reputation and enquiry for the academy.",
-    result: null,
+    result: "40 enquiries / month",
     image: null,
     featured: true,
     improvements: [
       {
+        value: "40",
+        suffix: "/mo",
+        label: "New enquiries",
+        context: "Every month, from parents and students.",
+      },
+      {
         value: "3",
-        label: "Channels connected",
-        context: "Web, performance and lead generation in one admissions path.",
+        suffix: "×",
+        label: "More people asking",
+        context: "Admissions interest vs. before we started.",
+      },
+      {
+        value: "5",
+        suffix: "%",
+        label: "People who clicked the ad",
+        context: "Higher than typical school ads.",
       },
     ],
   },

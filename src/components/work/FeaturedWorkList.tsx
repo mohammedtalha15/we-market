@@ -110,7 +110,9 @@ export function FeaturedWorkList({ projects }: { projects: Project[] }) {
                         "grid gap-8",
                         metrics.length === 1
                           ? "grid-cols-1 sm:max-w-sm"
-                          : "grid-cols-1 sm:grid-cols-2",
+                          : metrics.length === 2
+                            ? "grid-cols-1 sm:grid-cols-2"
+                            : "grid-cols-1 sm:grid-cols-3",
                       )}
                     >
                       {metrics.map((m) => (

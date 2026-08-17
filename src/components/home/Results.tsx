@@ -52,7 +52,11 @@ export function Results() {
             <div
               className={cn(
                 "mt-10 grid gap-x-10 gap-y-12",
-                current.stats.length > 1 ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 sm:max-w-md",
+                current.stats.length > 2
+                  ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                  : current.stats.length > 1
+                    ? "grid-cols-1 sm:grid-cols-2"
+                    : "grid-cols-1 sm:max-w-md",
               )}
             >
               {current.stats.map((stat, i) => (
