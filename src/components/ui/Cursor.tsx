@@ -69,7 +69,7 @@ function resolveMode(el: HTMLElement | null): CursorMode {
     return "image";
   }
 
-  if (el.closest("button, [data-cursor='cta']")) {
+  if (el.closest("[data-cursor='cta']")) {
     return "cta";
   }
 
