@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -5,8 +6,24 @@ import { Button } from "@/components/ui/Button";
 import { site } from "@/lib/data/site";
 
 const offerings = [
-  { id: "meta", label: "Paid social ads", icon: MetaLogo },
-  { id: "instagram", label: "Social media", icon: InstagramLogo },
+  {
+    id: "meta",
+    label: "Paid social ads",
+    src: "/logos/meta.jpg",
+    alt: "Meta",
+    width: 256,
+    height: 52,
+    className: "h-9 w-auto max-w-[12rem] object-contain md:h-11 md:max-w-[15rem]",
+  },
+  {
+    id: "instagram",
+    label: "Social media",
+    src: "/logos/instagram.jpg",
+    alt: "Instagram",
+    width: 80,
+    height: 80,
+    className: "h-16 w-16 rounded-[22%] object-cover md:h-20 md:w-20",
+  },
   { id: "react", label: "Website development", icon: ReactLogo },
   { id: "whatsapp", label: "WhatsApp automation", icon: WhatsAppLogo },
 ] as const;
@@ -43,14 +60,24 @@ export function Services() {
 
         <div className="mt-14 border-t border-line-onDark pt-12">
           <Reveal>
-            <p className="eyebrow text-fg-onDark-muted">What we offer</p>
+            <p className="eyebrow text-center text-fg-onDark-muted">What we offer</p>
           </Reveal>
-          <div className="mt-10 flex flex-wrap items-end justify-between gap-10 sm:gap-12">
+          <div className="mt-10 flex flex-wrap items-end justify-center gap-8 sm:gap-10 md:gap-12">
             {offerings.map((item, i) => (
               <Reveal key={item.id} delay={i * 70}>
                 <div className="flex flex-col items-center gap-4">
-                  <span className="inline-flex items-center justify-center" aria-hidden>
-                    <item.icon />
+                  <span className="inline-flex h-20 items-center justify-center md:h-24">
+                    {"src" in item ? (
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        width={item.width}
+                        height={item.height}
+                        className={item.className}
+                      />
+                    ) : (
+                      <item.icon />
+                    )}
                   </span>
                   <p className="text-center text-sm font-semibold tracking-tight text-fg-onDark">
                     {item.label}
@@ -62,41 +89,6 @@ export function Services() {
         </div>
       </Container>
     </section>
-  );
-}
-
-function MetaLogo() {
-  return (
-    <svg viewBox="0 0 36 24" className="h-14 w-auto md:h-20" fill="#0668E1" aria-hidden>
-      <path d="M24.45 2.8c-2.52 0-4.55 2.05-6.45 5.4C16.1 4.85 14.07 2.8 11.55 2.8 7.2 2.8 3.6 7.05 3.6 12.55c0 4.95 3.15 8.85 7.35 8.85 2.6 0 4.7-1.7 7.05-5.2 2.35 3.5 4.45 5.2 7.05 5.2 4.2 0 7.35-3.9 7.35-8.85C32.4 7.05 28.8 2.8 24.45 2.8Zm-13.2 16.1c-2.5 0-4.35-2.55-4.35-6.15 0-3.7 2-6.55 4.6-6.55 1.9 0 3.55 1.6 5.65 4.95-2.2 3.5-3.85 7.75-5.9 7.75Zm13.5 0c-2.05 0-3.7-4.25-5.9-7.75 2.1-3.35 3.75-4.95 5.65-4.95 2.6 0 4.6 2.85 4.6 6.55 0 3.6-1.85 6.15-4.35 6.15Z" />
-    </svg>
-  );
-}
-
-function InstagramLogo() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-16 w-16 md:h-20 md:w-20" aria-hidden>
-      <defs>
-        <radialGradient id="ig-g" cx="30%" cy="110%" r="120%">
-          <stop offset="0%" stopColor="#fccc63" />
-          <stop offset="50%" stopColor="#f96f54" />
-          <stop offset="100%" stopColor="#d62976" />
-        </radialGradient>
-      </defs>
-      <rect x="2" y="2" width="20" height="20" rx="5.5" fill="url(#ig-g)" />
-      <rect
-        x="6.4"
-        y="6.4"
-        width="11.2"
-        height="11.2"
-        rx="3.4"
-        fill="none"
-        stroke="white"
-        strokeWidth="1.7"
-      />
-      <circle cx="12" cy="12" r="2.7" fill="none" stroke="white" strokeWidth="1.7" />
-      <circle cx="16.15" cy="7.85" r="0.95" fill="white" />
-    </svg>
   );
 }
 
