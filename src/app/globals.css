@@ -355,7 +355,17 @@ h1, h2, h3, h4 {
 @keyframes draw-line {
   to { stroke-dashoffset: 0; }
 }
-@keyframes pop-in {
+@keyframes result-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.result-rise {
+  animation: result-rise 0.55s var(--ease-out-expo) both;
+}
+@keyframes hero-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
   0% { opacity: 0; transform: scale(0.5); }
   100% { opacity: 1; transform: scale(1); }
 }
@@ -368,6 +378,7 @@ h1, h2, h3, h4 {
 
 @media (prefers-reduced-motion: reduce) {
   .float-chip,
+  .result-rise,
   [class*="animate-"] { animation: none !important; }
   .draw-anim { stroke-dashoffset: 0 !important; animation: none !important; }
 }

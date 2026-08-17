@@ -4,7 +4,7 @@
  */
 
 /* ---- Results / business impact ----------------------------------------- */
-export type Result = {
+export type IndustryResultStat = {
   value: string;
   prefix?: string;
   suffix?: string;
@@ -13,34 +13,86 @@ export type Result = {
   accent: string;
 };
 
-export const results: Result[] = [
+export type IndustryResult = {
+  slug: string;
+  tab: string;
+  heading: string;
+  lead: string;
+  stats: IndustryResultStat[];
+};
+
+export const industryResults: IndustryResult[] = [
   {
-    value: "52",
-    suffix: "×",
-    label: "Growth",
-    context: "1,450 leads generated in a single year for a real-estate developer.",
-    accent: "#f96f54", // coral
+    slug: "real-estate",
+    tab: "Property",
+    heading: "For property businesses",
+    lead: "More people found the project. More people asked to visit.",
+    stats: [
+      {
+        value: "1,450",
+        label: "People who enquired",
+        context: "In one year, for a property developer.",
+        accent: "#ef7d3c",
+      },
+      {
+        value: "52",
+        suffix: "×",
+        label: "More enquiries than before",
+        context: "How much the enquiry volume grew after we started.",
+        accent: "#f96f54",
+      },
+    ],
   },
   {
-    value: "5",
-    suffix: "×",
-    label: "Growth",
-    context: "142 patient walk-ins per year for a healthcare client.",
-    accent: "#74e6bf", // mint
+    slug: "education",
+    tab: "Education",
+    heading: "For schools and colleges",
+    lead: "Parents and students found the school — and asked about admissions.",
+    stats: [
+      {
+        value: "50",
+        suffix: "/mo",
+        label: "New enquiries every month",
+        context: "People ready to talk about admissions.",
+        accent: "#f4c531",
+      },
+    ],
   },
   {
-    value: "5",
-    suffix: "%",
-    label: "Ad CTR",
-    context: "Click-through rates well above category benchmarks.",
-    accent: "#f4c531", // yellow
+    slug: "healthcare",
+    tab: "Healthcare",
+    heading: "For clinics and hospitals",
+    lead: "Patients found the clinic online — then walked in.",
+    stats: [
+      {
+        value: "142",
+        label: "People who walked in",
+        context: "Patients who came to the clinic in one year.",
+        accent: "#f96f54",
+      },
+      {
+        value: "5",
+        suffix: "×",
+        label: "More patients than before",
+        context: "How much walk-ins grew after we started.",
+        accent: "#74e6bf",
+      },
+    ],
   },
   {
-    value: "50",
-    suffix: "/mo",
-    label: "Qualified leads",
-    context: "A steady monthly pipeline of sales-ready enquiries.",
-    accent: "#4f74e6", // blue
+    slug: "corporate-professional",
+    tab: "Business",
+    heading: "For firms and companies",
+    lead: "Ads that more people actually click — not just see.",
+    stats: [
+      {
+        value: "5",
+        suffix: "%",
+        label: "People who clicked the ad",
+        context: "Higher than typical ads in this space.",
+        accent: "#4f74e6",
+      },
+    ],
   },
 ];
 
