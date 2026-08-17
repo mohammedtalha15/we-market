@@ -11,7 +11,7 @@ export function GrowthSystem() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative overflow-hidden bg-forest py-24 text-fg-onDark md:py-32">
+    <section className="relative overflow-hidden border-t border-line-onDark bg-forest py-24 text-fg-onDark md:py-32">
       <Container className="relative">
         <SectionHeading
           tone="dark"
