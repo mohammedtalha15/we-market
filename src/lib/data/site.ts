@@ -15,7 +15,7 @@ export const site = {
     phoneHref: "+919740508333",
     email: "info@wemarket.in",
     address:
-      "Magaji Inspire, 1A, Outer Ring Rd, 3rd Block, BDA Layout, 2nd Stage, Nagarabhavi, Bengaluru, Karnataka 560072",
+      "Second Floor, Samruddhi Arcade, 772, 80 Feet Rd, Opp. HDFC Bank, ITI Employees Layout, Mallathahalli, Bengaluru, Karnataka 560056",
     city: "Bengaluru",
   },
 
