@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/Button";
 import { site } from "@/lib/data/site";
 
 const offerings = [
-  { id: "meta", label: "Meta Ads", icon: MetaLogo },
-  { id: "instagram", label: "Instagram", icon: InstagramLogo },
-  { id: "react", label: "React", icon: ReactLogo },
-  { id: "whatsapp", label: "WhatsApp", icon: WhatsAppLogo },
+  { id: "meta", label: "Paid social ads", icon: MetaLogo },
+  { id: "instagram", label: "Social media", icon: InstagramLogo },
+  { id: "react", label: "Website development", icon: ReactLogo },
+  { id: "whatsapp", label: "WhatsApp automation", icon: WhatsAppLogo },
 ] as const;
 
 export function Services() {
@@ -45,16 +45,17 @@ export function Services() {
           <Reveal>
             <p className="eyebrow text-fg-onDark-muted">What we offer</p>
           </Reveal>
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-10 sm:gap-12">
+          <div className="mt-10 flex flex-wrap items-end justify-between gap-10 sm:gap-12">
             {offerings.map((item, i) => (
               <Reveal key={item.id} delay={i * 70}>
-                <span
-                  className="inline-flex items-center justify-center"
-                  role="img"
-                  aria-label={item.label}
-                >
-                  <item.icon />
-                </span>
+                <div className="flex flex-col items-center gap-4">
+                  <span className="inline-flex items-center justify-center" aria-hidden>
+                    <item.icon />
+                  </span>
+                  <p className="text-center text-sm font-semibold tracking-tight text-fg-onDark">
+                    {item.label}
+                  </p>
+                </div>
               </Reveal>
             ))}
           </div>

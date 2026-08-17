@@ -4,17 +4,15 @@
  */
 export const clients: string[] = [
   "Aadya Academy",
-  "Capital International School",
   "Baldwin International School",
   "GCIS PU College",
   "Christ Public School",
   "Federal PU College",
   "Knowledge Plant Academy",
   "Healius",
-  "Onco Caregiver",
   "Pragna Clinic",
   "Myura Aesthetics",
-  "Palli Developers",
+  "Amba Constructions",
   "Live In Properties",
   "Navya Builders & Developers",
   "CSR First Homes",

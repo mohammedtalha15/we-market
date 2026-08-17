@@ -11,11 +11,10 @@ function bySlug(slug: string) {
 
 // Curated editorial list — every project in the same format, metric-forward.
 const showcase = [
-  "palli-developers",
-  "onco-caregiver",
+  "amba-constructions",
   "aadya-academy",
   "healius",
-  "capital-international-school",
+  "knowledge-plant-academy",
 ].map(bySlug);
 
 export function FeaturedWork() {
@@ -55,7 +54,7 @@ export function FeaturedWork() {
           </div>
         </div>
 
-        {/* Unified editorial list + follow-cursor preview */}
+        {/* Unified editorial list */}
         <Reveal>
           <div className="mt-14 lg:mt-16">
             <FeaturedWorkList projects={showcase} />

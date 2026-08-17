@@ -30,7 +30,7 @@ export function Trust() {
           {clients.map((name) => (
             <span
               key={name}
-              className="mx-8 whitespace-nowrap text-xl font-bold tracking-tight text-fg-onDark-muted/60 transition-colors hover:text-white md:text-2xl"
+              className="mx-8 whitespace-nowrap text-xl font-bold tracking-tight text-fg-onDark-muted/60 md:text-2xl"
             >
               {name}
             </span>

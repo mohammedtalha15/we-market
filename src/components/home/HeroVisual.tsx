@@ -5,7 +5,7 @@
 const cards = [
   {
     accent: "#f96f54", // coral
-    client: "Palli Developers",
+    client: "Amba Constructions",
     tag: "Real Estate",
     metric: "1,450",
     unit: "leads / year",
@@ -17,10 +17,10 @@ const cards = [
   },
   {
     accent: "#f4c531", // yellow
-    client: "Onco Caregiver",
+    client: "Healius",
     tag: "Healthcare",
-    metric: "5×",
-    unit: "growth",
+    metric: "Care",
+    unit: "enquiries",
     rotate: 5,
     x: "40%",
     y: "22%",

@@ -32,6 +32,7 @@ export const testimonials: Testimonial[] = [
     company: "Knowledge Plant Academy",
     industry: "Education",
     photo: null,
+    projectSlug: "knowledge-plant-academy",
   },
   {
     quote:

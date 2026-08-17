@@ -18,8 +18,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "palli-developers",
-    client: "Palli Developers",
+    slug: "amba-constructions",
+    client: "Amba Constructions",
     industry: "Real Estate & Construction",
     industrySlug: "real-estate",
     services: ["Lead Generation", "Google Ads", "Landing Pages"],
@@ -53,19 +53,6 @@ export const projects: Project[] = [
     description:
       "A full-funnel healthcare programme building trust and local visibility to drive qualified patient enquiries.",
     result: null,
-    image: null,
-    featured: true,
-  },
-  {
-    slug: "onco-caregiver",
-    client: "Onco Caregiver",
-    industry: "Healthcare",
-    industrySlug: "healthcare",
-    services: ["360° Digital Marketing", "Content", "Performance"],
-    tags: ["healthcare", "performance"],
-    description:
-      "360° digital marketing for a cancer-care service — sensitive, trust-first creative paired with performance media.",
-    result: "5× growth · 142 patient walk-ins / year",
     image: null,
     featured: true,
   },
@@ -106,16 +93,17 @@ export const projects: Project[] = [
     image: null,
   },
   {
-    slug: "capital-international-school",
-    client: "Capital International School",
+    slug: "knowledge-plant-academy",
+    client: "Knowledge Plant Academy",
     industry: "Education",
     industrySlug: "education",
     services: ["Web", "Performance", "Lead Generation"],
     tags: ["education", "web", "performance"],
     description:
-      "An admissions-focused digital programme connecting search, reputation and enquiry for the school.",
+      "An admissions-focused digital programme connecting search, reputation and enquiry for the academy.",
     result: null,
     image: null,
+    featured: true,
   },
   {
     slug: "baldwin-international-school",
