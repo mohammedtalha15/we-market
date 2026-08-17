@@ -3,6 +3,14 @@
  * `image: null` => render an elegant placeholder. Never substitute stock imagery
  * as WeMarket client work. `result` is only set where a metric was supplied.
  */
+export type ProjectImprovement = {
+  value: string;
+  prefix?: string;
+  suffix?: string;
+  label: string;
+  context: string;
+};
+
 export type Project = {
   slug: string;
   client: string;
@@ -14,6 +22,7 @@ export type Project = {
   result: string | null;
   image: string | null; // path under /public/work when a real asset exists
   featured?: boolean;
+  improvements?: ProjectImprovement[];
 };
 
 export const projects: Project[] = [
@@ -29,6 +38,19 @@ export const projects: Project[] = [
     result: "1,450 leads in one year",
     image: null,
     featured: true,
+    improvements: [
+      {
+        value: "1,450",
+        label: "Leads generated",
+        context: "Qualified buyer enquiries in a single year.",
+      },
+      {
+        value: "52",
+        suffix: "×",
+        label: "Growth",
+        context: "Enquiry volume vs. the prior baseline.",
+      },
+    ],
   },
   {
     slug: "aadya-academy",
@@ -42,6 +64,14 @@ export const projects: Project[] = [
     result: null,
     image: null,
     featured: true,
+    improvements: [
+      {
+        value: "50",
+        suffix: "/mo",
+        label: "Qualified leads",
+        context: "A steady monthly pipeline of admissions-ready enquiries.",
+      },
+    ],
   },
   {
     slug: "healius",
@@ -55,6 +85,13 @@ export const projects: Project[] = [
     result: null,
     image: null,
     featured: true,
+    improvements: [
+      {
+        value: "3",
+        label: "Channels connected",
+        context: "Digital, web and performance working as one system.",
+      },
+    ],
   },
   {
     slug: "pragna-clinic",
@@ -104,6 +141,13 @@ export const projects: Project[] = [
     result: null,
     image: null,
     featured: true,
+    improvements: [
+      {
+        value: "3",
+        label: "Channels connected",
+        context: "Web, performance and lead generation in one admissions path.",
+      },
+    ],
   },
   {
     slug: "baldwin-international-school",
