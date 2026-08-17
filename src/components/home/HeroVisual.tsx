@@ -57,7 +57,7 @@ export function HeroVisual() {
       setIndex((i) => (i + 1) % proofs.length);
     }, TIMING.holdMs);
     return () => window.clearInterval(id);
-  }, [paused]);
+  }, [paused, index]);
 
   return (
     <div className="relative w-full max-w-[440px]">
